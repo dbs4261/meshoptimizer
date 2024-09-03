@@ -77,6 +77,7 @@ if(MESHOPT_BUILD_SHARED_LIBS)
 else()
     add_library(meshoptimizer STATIC ${SOURCES})
 endif()
+add_library(meshoptimizer::meshoptimizer ALIAS meshoptimizer)
 
 target_include_directories(meshoptimizer INTERFACE "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>")
 
